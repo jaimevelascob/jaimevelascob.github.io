@@ -4,7 +4,7 @@ This project is about a dog and cat classifier using Python and Tensorflow.
 
 # Files:
   ## root
-    ![](/img/tree.png?raw=true "shot1")
+  ![](/img/tree.png?raw=true "shot1")
     In the root folder we find the **.bin** and **model.js** generated previously when training the model with python and tensorflow together with the *index,html* that represents the visual code of the web page.
 
   ## js

@@ -1,299 +1,126 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <title>Perros y Gatos</title>
 
-    <!-- TODO: move js and css  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perros y Gatos</title>
+  <!-- TODO: clean code -->
+  <!-- TODO:  encajar css -->
+  <link rel="stylesheet" href="css/now.css">
+</head>
 
-    <style>
-      #resultado {
-        font-weight: bold;
-        font-size: 6rem;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    
-    <main>
-      <div class="px-4 py-2 my-2 text-center border-bottom">
-        <img class="d-block mx-auto mb-2" src="dogsvscats.jpg" alt="" width="200" height="200">
-        <h1 class="display-5 fw-bold">Dogs vs Cats</h1>
-      </div>
-
-      <div class="b-example-divider"></div>
-
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-12 col-md-4 offset-md-4 text-center">
-            <input type="file" class="btn btn-primary mb-2" id="image_input" onclick="loadImage();">
-            <video id="video" playsinline autoplay style="width: 1px;"></video>
-            <canvas id="canvas"></canvas>
-            <canvas id="canvas2"></canvas>
-            <canvas id="otrocanvas" width="150" height="150" ></canvas>
-            <div id="resultado"></div>            
+<body>
+  <main>
+    <!-- Website Header -->
+    <header>
+      <nav>
+        <div class="aw-container aw-align-center">
+          <img class="aw-logo aw-section-link" src="/img/dogsvscats.jpg" alt="" width="200" height="200" href="#">
+          <ul class="aw-navigation">
+            <li><a class="aw-section-link" href="#">Home</a></li>
+            <li><a class="aw-section-link" href="#aw-About">About</a></li>
+            <li><a class="aw-section-link" href="#aw-Predict">Predict</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- home -->
+    <section class="shome">
+      <div class="home1">
+        <div class="home2">
+          <div class="homep">
+            <span class="title ">A</span>
+            <span class="title title01">prediction</span>
+            <span class="title ">model trained to recognize</span>
+            <span class="title title02">dogs</span>
+            <span class="title ">&</span>
+            <span class="title title03">cats</span>
           </div>
         </div>
       </div>
-
-      <div class="b-example-divider"></div>
-
-      <div class="bg-dark text-secondary mt-5 px-4 py-2 text-center">
-        <div class="py-5">
-          <h1 class="display-5 fw-bold text-white">Dogs vs Cats</h1>
+    </section>
+    <section id="aw-About" class="sectioncat">
+      <div class="homecat1">
+        <div class="homecat2">
+          <h2>Free use software for predict</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nisi justo. Integer venenatis
+            tortor
+            sit amet mauris congue ornare. Nunc nec nisi vulputate nunc iaculis tempor. Phasellus metus augue,
+            pellentesque a lacus et, laoreet iaculis lacus. Proin commodo nisi nec diam laoreet hendrerit. Sed mattis
+            non
+            odio vitae facilisis. Donec elementum sapien eu lacus pharetra, eget fringilla nulla cursus. Vivamus nisl
+            lorem, tincidunt id dapibus eget, ullamcorper non sapien. Vestibulum venenatis erat nulla, id tristique
+          </p>
+        </div>
+        <div class="homecat">
+          <div class="homecatb">
+          </div>
         </div>
       </div>
+    </section>
+    <!-- model -->
+    <section class="howtopredict" id="aw-Predict">
+      <div class="spredict">
+        <h2>How To Predict</h2>
+      </div>
+      <div class="newpredict">
+        <div class="newcontainer">
+          <div class="re">
+            <p>1. Upload the photo that you want to predict in jpg/png format.</p>
+          </div>
+          <div class="re">
+            <p>2. See the result below</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="spredict">
+      <h2>Predict</h2>
+    </section>
+    <section class="spredict">
+      <div class="predictb">
+        <div class="new">
+          <div class="container">
+            <div class="img-area" data-img="">
+              <i class='bx bxs-cloud-upload icon'></i>
+              <h3>Upload Image</h3>
+              <p>Image type must be <span>jpg/jpeg</span></p>
+            </div>
+            <input type="file" id="input" title=" " />
+          </div>
+          <div class="resultado">
+            <div class="resu">
+              <p id="resultado"></p>
+            </div>
+          </div>
+          <div class="container">
+            <canvas id="canvas2" width="400" height="400"></canvas>
+            <canvas hidden id="canvas"></canvas>
+            <canvas hidden id="otrocanvas" width="100" height="100"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="aw-container aw-align-center">
+        <!-- <img class="aw-logo aw-section-link" src="dogsvscats.jpg" alt="" width="200" height="200"> -->
+        <p>© 2023, D&C S.L.</p>
+        <ul class="aw-social-icons">
+          <li><a href="#" <i class='bx bxl-linkedin icon-diamonds'> </i></a></li>
+          <li><a href="#" <i class='bx bxl-gmail icon-diamonds'></i></a></li>
+          <li><a href="#" <i class='bx bxl-instagram icon-diamonds'></i></a></li>
+          <li><a href="#" <i class='bx bxl-twitter icon-diamonds'></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 
-      <div class="b-example-divider mb-0"></div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-
-  <script type="text/javascript">
-
-    var tamano = 400;
-    var video = document.getElementById("video");
-    var canvas = document.getElementById("canvas");
-    var canvas2 = document.getElementById("canvas");
-    var otrocanvas = document.getElementById("otrocanvas");
-    var ctx = canvas.getContext("2d");
-    var currentStream = null;
-    var facingMode = "user";
-
-    var modelo = null;
-
-    (async() => {
-      console.log("Cargando modelo...");
-      modelo = await tf.loadLayersModel("model.json");
-      console.log("Modelo cargado");
-    })();
-
-    window.onload = function() {
-      mostrarCamara();
-    }
-
-    function loadImage()
-  {
-      const image_input = document.querySelector("#image_input");
-      var uploaded_image = "";
-
-      image_input.addEventListener("change", function(){
-        const reader = new FileReader();
-        reader.addEventListener("load", () => {
-          uploaded_image = reader.result;
-          var img1 = new Image();
-          img1.src = uploaded_image;
-          img1.alt = 'alt';
-          canvas.width = img1.naturalWidth;
-          canvas.height = img1.naturalHeight;
-          canvas2.width = img1.naturalWidth;
-          canvas2.height = img1.naturalHeight;
-          //TODO: resize img to 400 * 400
-          ctx.drawImage(img1, 0, 0);
-          reader.readAsDataURL(this.files[0]);
-        });
-        reader.readAsDataURL(this.files[0]);
-        predecir();
-      })
-      // resample_single(canvas, 400, 400, otrocanvas);
-    }
-    // function mostrarCamara() {
-    //   var opciones = {
-    //     audio: false,
-    //     video: {
-    //       width: tamano, height: tamano
-    //     }
-    //   }
-    //
-    //   if (navigator.mediaDevices.getUserMedia) {
-    //     navigator.mediaDevices.getUserMedia(opciones)
-    //         .then(function(stream) {
-    //           currentStream = stream;
-    //           video.srcObject = currentStream;
-    //           // procesarCamara();
-    //           // predecir();
-    //         })
-    //         .catch(function(err) {
-    //           alert("No se pudo utilizar la camara :(");
-    //           console.log(err);
-    //           alert(err);
-    //         })
-    //   } else {
-    //     alert("No existe la funcion getUserMedia");
-    //   }
-    // }
-    //
-    // function cambiarCamara() {
-    //       if (currentStream) {
-    //           currentStream.getTracks().forEach(track => {
-    //               track.stop();
-    //           });
-    //       }
-    //
-    //       facingMode = facingMode == "user" ? "environment" : "user";
-    //
-    //       var opciones = {
-    //           audio: false,
-    //           video: {
-    //               facingMode: facingMode, width: tamano, height: tamano
-    //           }
-    //       };
-    //
-    //
-    //       navigator.mediaDevices.getUserMedia(opciones)
-    //           .then(function(stream) {
-    //               currentStream = stream;
-    //               video.srcObject = currentStream;
-    //           })
-    //           .catch(function(err) {
-    //               console.log("Oops, hubo un error", err);
-    //           })
-    //   }
-
-    function procesarCamara() {
-      var img1 = new Image();
-      // img1.src = 'cat.jpeg';
-      // img1.alt = 'alt';
-      // canvas.width = img1.naturalWidth;
-      // canvas.height = img1.naturalHeight;
-      // ctx.drawImage(img1, 0, 0);
-      // changephoto();
-      // ctx.drawImage(video, 0, 0, tamano, tamano, 0, 0, tamano, tamano);
-      setTimeout(procesarCamara, 20);
-    }
-
-    function predecir() {
-      if (modelo != null) {
-        resample_single(canvas, 100, 100, otrocanvas);
-
-        //Hacer la predicción
-        var ctx2 = otrocanvas.getContext("2d");
-        // console.log("w" + otrocanvas.width);
-        // console.log("h" + otrocanvas.height);
-
-        var imgData = ctx2.getImageData(0,0, 100, 100);
-        // console.log("aaaaaa " + imgData.data.length);
-        var arr = [];
-        var arr100 = [];
-
-        for (var p=0; p < imgData.data.length; p+= 4) {
-          var rojo = imgData.data[p] / 255;
-          var verde = imgData.data[p+1] / 255;
-          var azul = imgData.data[p+2] / 255;
-
-          var gris = (rojo+verde+azul)/3;
-
-          arr100.push([gris]);
-          if (arr100.length == 100) {
-            arr.push(arr100);
-            arr100 = [];
-          }
-        }
-
-        arr = [arr];
-
-        var tensor = tf.tensor4d(arr);
-        var resultado = modelo.predict(tensor).dataSync();
-
-        var respuesta;
-        if (resultado <= .5) {
-          respuesta = "Cat";
-        } else {
-          respuesta = "Dog";
-        }
-        document.getElementById("resultado").innerHTML = respuesta + resultado;
-
-      }
-
-      setTimeout(predecir, 150);
-    }
-
-    /**
-       * Hermite resize - fast image resize/resample using Hermite filter. 1 cpu version!
-       * 
-       * @param {HtmlElement} canvas
-       * @param {int} width
-       * @param {int} height
-       * @param {boolean} resize_canvas if true, canvas will be resized. Optional.
-       * Cambiado por RT, resize canvas ahora es donde se pone el chiqitillllllo
-       */
-      function resample_single(canvas, width, height, resize_canvas) {
-          var width_source = canvas.width;
-          var height_source = canvas.height;
-          width = Math.round(width);
-          height = Math.round(height);
-
-          var ratio_w = width_source / width;
-          var ratio_h = height_source / height;
-          var ratio_w_half = Math.ceil(ratio_w / 2);
-          var ratio_h_half = Math.ceil(ratio_h / 2);
-
-          var ctx = canvas.getContext("2d");
-          var ctx2 = resize_canvas.getContext("2d");
-          // console.log("W" + canvas.width);
-          // console.log("H" + canvas.height);
-      
-          var img = ctx.getImageData(0, 0, width_source, height_source);
-          var img2 = ctx2.createImageData(width, height);
-          var data = img.data;
-          var data2 = img2.data;
-
-          for (var j = 0; j < height; j++) {
-              for (var i = 0; i < width; i++) {
-                  var x2 = (i + j * width) * 4;
-                  var weight = 0;
-                  var weights = 0;
-                  var weights_alpha = 0;
-                  var gx_r = 0;
-                  var gx_g = 0;
-                  var gx_b = 0;
-                  var gx_a = 0;
-                  var center_y = (j + 0.5) * ratio_h;
-                  var yy_start = Math.floor(j * ratio_h);
-                  var yy_stop = Math.ceil((j + 1) * ratio_h);
-                  for (var yy = yy_start; yy < yy_stop; yy++) {
-                      var dy = Math.abs(center_y - (yy + 0.5)) / ratio_h_half;
-                      var center_x = (i + 0.5) * ratio_w;
-                      var w0 = dy * dy; //pre-calc part of w
-                      var xx_start = Math.floor(i * ratio_w);
-                      var xx_stop = Math.ceil((i + 1) * ratio_w);
-                      for (var xx = xx_start; xx < xx_stop; xx++) {
-                          var dx = Math.abs(center_x - (xx + 0.5)) / ratio_w_half;
-                          var w = Math.sqrt(w0 + dx * dx);
-                          if (w >= 1) {
-                              //pixel too far
-                              continue;
-                          }
-                          //hermite filter
-                          weight = 2 * w * w * w - 3 * w * w + 1;
-                          var pos_x = 4 * (xx + yy * width_source);
-                          //alpha
-                          gx_a += weight * data[pos_x + 3];
-                          weights_alpha += weight;
-                          //colors
-                          if (data[pos_x + 3] < 255)
-                              weight = weight * data[pos_x + 3] / 250;
-                          gx_r += weight * data[pos_x];
-                          gx_g += weight * data[pos_x + 1];
-                          gx_b += weight * data[pos_x + 2];
-                          weights += weight;
-                      }
-                  }
-                  data2[x2] = gx_r / weights;
-                  data2[x2 + 1] = gx_g / weights;
-                  data2[x2 + 2] = gx_b / weights;
-                  data2[x2 + 3] = gx_a / weights_alpha;
-              }
-          }
-          ctx2.putImageData(img2, 0, 0);
-      }
-  </script>
-  </body>
 </html>

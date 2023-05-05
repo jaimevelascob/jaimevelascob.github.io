@@ -1,0 +1,392 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+    font-family: 'AccordAlternate';
+}
+
+/* Header */
+
+header {
+  position: relative;
+}
+
+.aw-main-banner {
+  display: block;
+  width: 100%;
+}
+
+header nav {
+  padding: 10px 0;
+  width: 100%;
+  
+  position: fixed;
+  box-shadow: inset 0 -1px 0 0 #DF8453;
+}
+
+
+header nav.aw-nav-fixed {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.21);
+}
+
+header nav.aw-nav-fixed li a{
+  color: white;
+}
+
+header nav ul.aw-navigation {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul.aw-navigation li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0 16px;
+}
+
+header nav ul.aw-navigation li a:last-child a {
+  padding-right: 0;
+}
+
+
+header nav ul.aw-navigation li a::first-letter {
+    font-size: 1.5rem;
+    color: #DF8453;
+}
+
+header nav ul.aw-navigation li a:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 1px;
+  color: black;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header nav ul.aw-navigation li a:hover:after {
+  opacity: 1;
+}
+
+/* logo */
+.aw-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}
+
+/* Header */
+/* home */
+
+.shome {
+  display: block;
+  background: url(/img/doghome.jpg) no-repeat calc(100% - 70px) top;
+  height: 100vh;
+  width: 100%;
+  padding: 0.5em;
+}
+.home1 { 
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    justify-content: right;
+}
+
+.home2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    top: 0;
+    width: 50vw;
+    height: 50vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.homep {
+    font-family: 'AccordAlternate-Bold';
+    font-size: 50px;
+    line-height: 60px;
+  display: block;
+   text-transform: uppercase;
+}
+
+.sectioncat {
+  display: block;
+  height: 50vh;
+  width: 100%;
+  padding: 0.5em;
+}
+.homecatb {
+  height: 30vh;
+  width: 100%;
+  background: #DF8453;
+  opacity: 70%;
+}
+.homecat {
+  background: url(/img/cat34.jpg) no-repeat calc(100% - 70px) top;
+  width: 50%;
+}
+.homecat1 { 
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.homecat2 {
+    margin-right: 50px;
+    margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    top: 0;
+  width: 50%;
+}
+
+h2 {
+    font-weight: normal;
+    font-family: 'AccordAlternate-Bold';
+    font-size: 50px;
+    line-height: 55px;
+    margin: 30px 0;
+}
+
+.homecat2 p {
+  display: block;
+  font-size: 20px;
+    line-height: 30px;
+}
+/* animation home */
+
+.title {
+  animation: color-animation 4s linear infinite;
+}
+
+.title01 {
+  --color-1: #DF8453; /* orange */
+  --color-2: #17494D; /* blue */
+  --color-3: #17494D; 
+}
+
+.title02 {
+  --color-1: #17494D;
+  --color-2: #DF8453;
+  --color-3: #DF8453;
+}
+
+.title03 {
+  --color-1: #17494D;
+  --color-2: #17494D;
+  --color-3: #DF8453;
+}
+
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.home p {
+  font-size: 20px;
+  line-height: 30px;
+}
+.homet {
+margin: 0 auto;
+}
+
+ /* predict */
+
+.spredict {
+  display: block;
+  position: static;
+  margin-bottom: 10px;
+}
+
+.predictb {
+  display: block;
+}
+
+.spredict h2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+.new {
+  background: url(/img/cat3.jpg) no-repeat calc(100% - 70px) top;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.newpredict {
+display: block;
+}
+
+.newcontainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.re {
+  width: 30%;
+}
+
+.newcontainer p {
+    font-size: 35px;
+    line-height: 40px;
+    font-family: 'AccordAlternate-Bold';
+}
+
+.resultado {
+  background: url(/img/1.png) no-repeat calc(100% - 70px) top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	max-width: 400px;
+	width: 100%;
+	border-radius: 30px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
+}
+
+.resultado p {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.container {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	max-width: 400px;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 30px;
+}
+
+#canvas2 {
+  	border-radius: 30px;
+}
+
+
+.img-area {
+	position: relative;
+	width: 100%;
+	height: 240px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.img-area .icon {
+	font-size: 100px;
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+.img-area p {
+  color: black;
+}
+.img-area p span {
+	font-weight: 600;
+}
+
+#input {
+	display: block;
+	padding: 16px 0;
+	border-radius: 15px;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+#input:hover {
+	background: var(--dark-blue);
+}
+
+/* footer */
+
+footer {
+  background-color: #444;
+  padding: 10px 0;
+}
+
+.aw-container p {
+  color: white;
+}
+footer .aw-logo {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+}
+
+footer .aw-social-icons {
+  display: flex;
+  list-style-type: none;
+}
+footer .aw-social-icons li {
+  margin-left: 15px;
+}
+footer .aw-social-icons li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+footer .aw-social-icons li a:hover {
+  opacity: 0.7;
+}
+.aw-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.aw-align-center {
+  align-items: center;
+}
+
+

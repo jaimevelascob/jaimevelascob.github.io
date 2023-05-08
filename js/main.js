@@ -18,7 +18,7 @@ function handleFiles(e) {
     predecir();
   }
   img.src = URL.createObjectURL(e.target.files[0]);
-  if (!e.target.files[0] || e.target.files[0].type !== 'image/jpeg') {
+  if (!e.target.files[0] || e.target.files[0].type !== 'image/jpeg' && e.target.files[0].type !== 'image/png') {
     alert('file is not jpg/jpeg');
   }
 }
@@ -159,7 +159,6 @@ function resample_single(canvas, width, height, resize_canvas) {
     let sectionPosition, sectionOffset;
     const navigationHeight = document.querySelector("header nav").offsetHeight;
     const pageWidth = window.innerWidth;
-    console.log("hola");
 
     if (sectionId !== "#") {
       sectionOffset = document.querySelector(sectionId).offsetTop;
